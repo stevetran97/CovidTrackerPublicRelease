@@ -1,0 +1,28 @@
+# Turn off prettier when working in yaml. ports and links needs to be entered to next line
+# Tabs matter (Be careful)
+version: '3'
+services:
+  # Different containers
+  app:
+    # Specify a container name
+    container_name: covidtrackerGHB
+    # Restart if fails
+    restart: always
+    # Look in current directory for docker file to build
+    build: .
+    # Port to run
+    ports: 
+      - '80:5000'
+    # Link containers
+    links: 
+      - mongo
+  mongo:
+    # Specify a container name
+    # Note this container_name matters: mapped to in index.js
+    container_name: mongo
+    # Pull image from docker hub
+    image: mongo
+    # Port to run
+    ports: 
+      - '27017:27017'
+

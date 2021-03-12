@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Covid Precautionary Form</title>
+  {{!-- Original --}}
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+  <link rel="stylesheet" href="public/css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="brand"><span>COVID</span> Precautionary Form</h1>
+    <div class="wrapper animated bounceInLeft">
+      <div class="company-info">
+        <h3>Nails by Megan</h3>
+        <ul>
+          <li><i class="fa fa-road"></i> 44 Something st</li>
+          <li><i class="fa fa-phone"></i> (555) 555-5555</li>
+          <li><i class="fa fa-envelope"></i> test@acme.test</li>
+        </ul>
+      </div>
+      <div class="contact">
+        <h3> Us</h3>
+        <div id="sentNotify">
+          {{msg}}
+        </div>
+        <form method="POST" action="send">
+          <p>
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Full Name Please" required=true>
+          </p>
+          <p>
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="Email Address" required=true>
+          </p>
+          <p>
+            <label>Phone Number</label>
+            <input type="number" name="phone" placeholder="Phone Number" required=true>
+          </p>
+
+          <p class="full">
+            <label>Are you <b>feeling sick?</b> (Examples include a <b>new cough, headache, weakness,
+                fever, difficulty breathing, loss of smell</b> or <b>taste, loss of appetite, chills</b>,
+              etc.)</label>
+            <select name="feelsSick" required=true>
+              <option disabled selected value> -- select an option -- </option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </p>
+
+          <p class="full">
+            <label>Have you <b>travelled outside of Canada</b> in the past 14 days?</label>
+            <select name="recentTravel" required=true>
+              <option disabled selected value> -- select an option -- </option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </p>
+
+
+          <p class="full">
+            <label>Do you <b>provide care</b> or have <b>close contact</b> with a person <b>with
+                COVID-19</b> (probable or confirmed) while they were ill and you <b>did not</b> have appropriate
+              PPE?</label>
+            <select name="covidContacted" required=true>
+              <option disabled selected value> -- select an option -- </option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </p>
+
+          <p class="full">
+            <label>Comment</label>
+            <textarea name="message" rows="5" placeholder="Optional..."></textarea>
+          </p>
+          <p class="full">
+            <button type="submit">Submit</button>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    {{!-- Extra --}}
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+      integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+      integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+      crossorigin="anonymous"></script>
+  </div>
+</body>
+
+</html>
