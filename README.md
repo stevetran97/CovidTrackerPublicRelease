@@ -18,4 +18,4 @@ docker-compose up -d
 
 ## Deployable
 
-On Heroku
+Tested Deployable on Heroku on the process environment port
